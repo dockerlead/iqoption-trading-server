@@ -1,16 +1,12 @@
 from settings import *
-from iqoptionapi.stable_api import IQ_Option
-import logging
-import time
-import random
+# from fastapi import FastAPI
+from services.iqoption_service import *
 
-logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(message)s')
-I_want_money=IQ_Option(os.getenv("IQ_OPTION_USER"), os.getenv("IQ_OPTION_PASSWORD"))
-I_want_money.connect()
+# app = FastAPI()
 
-ACTIVES="GBPUSD"
-INTERVAL=60
-COUNT=5
-print("Start getting candles ... ============================>")
-print(I_want_money.get_candles(ACTIVES, INTERVAL, COUNT, time.time()))
+start_candles_stream()
+while True:
+    chunk = get_real_time_candles()
+    print(chunk)
+stop_candles_stream()
 
