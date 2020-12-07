@@ -22,7 +22,7 @@ start_candles_stream()
 
 
 @router.websocket_route("/ws")
-async def echo_socket(websocket: WebSocket):
+async def get_candles(websocket: WebSocket):
     await manager.connect(websocket)
     try:
         while True:
