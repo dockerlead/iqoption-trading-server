@@ -25,7 +25,8 @@ def get_real_time_candles():
         'low': 0,
         'close': 0,
         'volume': 0,
-        'timestamp': ''
+        'timestamp': 0,
+        'formattedTime': ''
     }
     for timestamp in candles:
         input["open"]      = candles[timestamp]["open"]
@@ -33,7 +34,8 @@ def get_real_time_candles():
         input["low"]       = candles[timestamp]["min"]
         input["close"]     = candles[timestamp]["close"]
         input["volume"]    = candles[timestamp]["volume"]
-        input["timestamp"] = datetime.utcfromtimestamp(timestamp).strftime("%m/%d/%Y, %H:%M:%S")
+        input["timestamp"] = timestamp
+        input["formattedTime"] = datetime.utcfromtimestamp(timestamp).strftime("%m/%d/%Y, %H:%M:%S")
         inputs.append(input)
     return inputs    
 
