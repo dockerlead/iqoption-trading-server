@@ -14,5 +14,5 @@ docker-compose up -d
 ```
 
 ## License
-MIT
+MIT  
 Made by DockerLead with :heart:
