@@ -20,22 +20,22 @@ def get_real_time_candles():
     candles=I_want_money.get_realtime_candles(goal,size)
     inputs = []
     input = {
-        'open': 0,
-        'high': 0,
-        'low': 0,
-        'close': 0,
-        'volume': 0,
+        'Open': 0,
+        'High': 0,
+        'Low': 0,
+        'Close': 0,
+        'Volume': 0,
         'timestamp': 0,
-        'formattedTime': ''
+        'Date': ''
     }
     for timestamp in candles:
-        input["open"]      = candles[timestamp]["open"]
-        input["high"]      = candles[timestamp]["max"]
-        input["low"]       = candles[timestamp]["min"]
-        input["close"]     = candles[timestamp]["close"]
-        input["volume"]    = candles[timestamp]["volume"]
+        input["Open"]      = candles[timestamp]["open"]
+        input["High"]      = candles[timestamp]["max"]
+        input["Low"]       = candles[timestamp]["min"]
+        input["Close"]     = candles[timestamp]["close"]
+        input["Volume"]    = candles[timestamp]["volume"]
         input["timestamp"] = timestamp
-        input["formattedTime"] = datetime.utcfromtimestamp(timestamp).strftime("%m/%d/%Y, %H:%M:%S")
+        input["Date"] = datetime.utcfromtimestamp(timestamp).strftime("%Y/%m/%d, %H:%M:%S")
         inputs.append(input)
     return inputs    
 
