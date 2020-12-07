@@ -1,0 +1,8 @@
+version: "3.8"
+services: 
+  fastapi:
+    container_name: iqoption_trader
+    build: .
+    ports: 
+      - "${APP_PORT}:8000"
+    restart: always
