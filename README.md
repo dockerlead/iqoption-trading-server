@@ -15,4 +15,5 @@ docker-compose up -d
 
 ## License
 MIT  
-Made by DockerLead with :heart:
+Made by DockerLead with :heart:  
+Set this as private due to lack of value to become an opensource.  
