@@ -1,5 +1,7 @@
 # IQOPTION Trading Server
-IQ_OPTION Trader Backend POC
+IQ_OPTION Trader Backend POC  
+
+Note: See #3. PRs are welcome.  
 
 ## Development
 ```bash
@@ -16,4 +18,3 @@ docker-compose up -d
 ## License
 MIT  
 Made by DockerLead with :heart:  
-Set this as private due to lack of value to become an opensource.  
